@@ -81,6 +81,30 @@ if (readMoreBtn && fullArticle) {
     });
 }
 
+// Trip Plan Expand Hook
+function toggleTripPlan() {
+    const article = document.getElementById('tripPlanArticle');
+    const btnText = document.getElementById('tripPlanBtnText');
+    const icon = document.getElementById('tripPlanIcon');
+
+    if (!article) return;
+
+    article.classList.toggle('expanded');
+
+    if (article.classList.contains('expanded')) {
+        btnText.textContent = 'Hide Itinerary';
+        icon.setAttribute('data-lucide', 'chevron-up');
+    } else {
+        btnText.textContent = 'View Full Itinerary';
+        icon.setAttribute('data-lucide', 'map');
+    }
+    
+    // Re-initialize the icon so it updates correctly
+    if (window.lucide) {
+        window.lucide.createIcons();
+    }
+}
+
 // Weather Widget Logic
 async function fetchWeather() {
     const teekoyEl = document.querySelector('#weather-teekoy .temp');

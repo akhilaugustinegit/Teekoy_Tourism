@@ -396,6 +396,20 @@
                     <!-- Card 3 -->
                     <div class="swiper-slide place-card">
                         <div class="card-image">
+                            <img src="https://media-cdn.tripadvisor.com/media/photo-s/08/82/d2/e0/vagamon-lake.jpg"
+                                alt="Vagamon Lake - Tourist attraction" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Vagamon Lake</h3>
+                            <p>A serene artificial lake nestled between three green hills, offering relaxing pedal
+                                boating
+                                amidst picturesque valleys.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="swiper-slide place-card">
+                        <div class="card-image">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Vagamon_Kurisumala_-_%E0%B4%B5%E0%B4%BE%E0%B4%97%E0%B4%AE%E0%B5%BA_%E0%B4%95%E0%B5%81%E0%B4%B0%E0%B4%BF%E0%B4%B6%E0%B5%81%E0%B4%AE%E0%B4%B2_03.jpg"
                                 alt="Vagamon Kurisumala Ashram - Tourist places near Vagamon" loading="lazy">
                         </div>
@@ -406,7 +420,7 @@
                         </div>
                     </div>
 
-                    <!-- Card 4 -->
+                    <!-- Card 5 -->
                     <div class="swiper-slide place-card">
                         <div class="card-image">
                             <img src="https://myholidayhappiness.com/uploads/thangal-para-2910.jpg"
@@ -417,20 +431,6 @@
                             <p>A massive spherical rock formation perched on a hill, providing stunning, sweeping views
                                 of
                                 the Vagamon landscape.</p>
-                        </div>
-                    </div>
-
-                    <!-- Card 5 -->
-                    <div class="swiper-slide place-card">
-                        <div class="card-image">
-                            <img src="https://media-cdn.tripadvisor.com/media/photo-s/08/82/d2/e0/vagamon-lake.jpg"
-                                alt="Vagamon Lake - Tourist attraction" loading="lazy">
-                        </div>
-                        <div class="card-content">
-                            <h3>Vagamon Lake</h3>
-                            <p>A serene artificial lake nestled between three green hills, offering relaxing pedal
-                                boating
-                                amidst picturesque valleys.</p>
                         </div>
                     </div>
 
@@ -464,6 +464,20 @@
                     <!-- DUP Card 3 -->
                     <div class="swiper-slide place-card">
                         <div class="card-image">
+                            <img src="https://media-cdn.tripadvisor.com/media/photo-s/08/82/d2/e0/vagamon-lake.jpg"
+                                alt="Vagamon Lake - Tourist attraction" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Vagamon Lake</h3>
+                            <p>A serene artificial lake nestled between three green hills, offering relaxing pedal
+                                boating
+                                amidst picturesque valleys.</p>
+                        </div>
+                    </div>
+
+                    <!-- DUP Card 4 -->
+                    <div class="swiper-slide place-card">
+                        <div class="card-image">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Vagamon_Kurisumala_-_%E0%B4%B5%E0%B4%BE%E0%B4%97%E0%B4%AE%E0%B5%BA_%E0%B4%95%E0%B5%81%E0%B4%B0%E0%B4%BF%E0%B4%B6%E0%B5%81%E0%B4%AE%E0%B4%B2_03.jpg"
                                 alt="Vagamon Kurisumala Ashram - Tourist places near Vagamon" loading="lazy">
                         </div>
@@ -474,7 +488,7 @@
                         </div>
                     </div>
 
-                    <!-- DUP Card 4 -->
+                    <!-- DUP Card 5 -->
                     <div class="swiper-slide place-card">
                         <div class="card-image">
                             <img src="https://myholidayhappiness.com/uploads/thangal-para-2910.jpg"
@@ -487,23 +501,110 @@
                                 the Vagamon landscape.</p>
                         </div>
                     </div>
-
-                    <!-- DUP Card 5 -->
-                    <div class="swiper-slide place-card">
-                        <div class="card-image">
-                            <img src="https://media-cdn.tripadvisor.com/media/photo-s/08/82/d2/e0/vagamon-lake.jpg"
-                                alt="Vagamon Lake - Tourist attraction" loading="lazy">
-                        </div>
-                        <div class="card-content">
-                            <h3>Vagamon Lake</h3>
-                            <p>A serene artificial lake nestled between three green hills, offering relaxing pedal
-                                boating
-                                amidst picturesque valleys.</p>
-                        </div>
-                    </div>
                 </div>
                 <!-- Add Pagination -->
                 <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+    <!-- Trip Plan Section -->
+    <section class="section-padding" style="background-color: var(--bg-light);">
+        <div class="container fade-up">
+            <div class="read-more-container">
+                <div class="section-header" style="margin-bottom: 2rem;">
+                    <h2>Unlock The Perfect Trip</h2>
+                    <p>Don't miss out on the ultimate Teekoy-Vagamon-Illikkal Kallu circuit.</p>
+                </div>
+                <p class="brief-desc" style="max-width: 700px; margin: 0 auto 2rem auto; font-weight: 500;">Ready for misty mountains, hidden waterfalls, and a magical sunset? Press the button below to instantly generate the ultimate 1-day road trip plan tailored for you.</p>
+                
+                <button class="read-more-btn" onclick="toggleTripPlan()" style="background-color: var(--accent); color: var(--primary-dark); font-weight: 700; border: none; padding: 1rem 2rem;">
+                    <i data-lucide="sparkles" id="tripPlanIcon"></i> <span id="tripPlanBtnText">Press to Create Your 1-Day Plan</span>
+                </button>
+
+                <div class="full-article" id="tripPlanArticle">
+                    <div class="itinerary-timeline">
+                        <!-- Sunrise -->
+                        <div class="itinerary-item fade-up">
+                            <div class="itinerary-marker"><i data-lucide="sunrise"></i></div>
+                            <div class="itinerary-content">
+                                <span class="itinerary-time">6:00 AM – 7:30 AM</span>
+                                <h3>Sunrise at Illikkal Kallu</h3>
+                                <p>Watch the sun rise above the mountains at one of Kerala’s most breathtaking viewpoints. Famous for its dramatic cliffs, floating clouds, and panoramic valley views.</p>
+                                <ul>
+                                    <li><strong>Why Visit?</strong> Spectacular sunrise scenery, cool mountain atmosphere, beautiful trekking trails.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Waterfalls -->
+                        <div class="itinerary-item fade-up delay-1">
+                            <div class="itinerary-marker"><i data-lucide="waves"></i></div>
+                            <div class="itinerary-content">
+                                <span class="itinerary-time">8:30 AM – 10:00 AM</span>
+                                <h3>Kattikayam Waterfalls</h3>
+                                <p>Head toward the refreshing waterfalls surrounded by lush greenery and rocky landscapes.</p>
+                                <ul>
+                                    <li><strong>Highlights:</strong> Natural waterfall views, peaceful atmosphere, great photo location.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Breakfast -->
+                        <div class="itinerary-item fade-up">
+                            <div class="itinerary-marker"><i data-lucide="coffee"></i></div>
+                            <div class="itinerary-content">
+                                <span class="itinerary-time">10:30 AM – 11:30 AM</span>
+                                <h3>Traditional Kerala Breakfast</h3>
+                                <p>Take a break while heading toward Vagamon and enjoy authentic Kerala flavors.</p>
+                                <ul>
+                                    <li><strong>Must Try:</strong> Puttu & Kadala Curry, Appam & Stew, Kerala Tea.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Vagamon -->
+                        <div class="itinerary-item fade-up delay-1">
+                            <div class="itinerary-marker"><i data-lucide="trees"></i></div>
+                            <div class="itinerary-content">
+                                <span class="itinerary-time">12:00 PM – 4:00 PM</span>
+                                <h3>Explore Vagamon</h3>
+                                <p>Known for its rolling hills, pine forests, tea plantations, and cool climate, Vagamon is perfect for a relaxing afternoon.</p>
+                                <ul>
+                                    <li><strong>Pine Forest:</strong> Walk through the tall pine trees.</li>
+                                    <li><strong>Vagamon Meadows:</strong> Wide green hills covered in mist.</li>
+                                    <li><strong>Adventure Spots:</strong> Glass bridge, Zipline, Giant swing.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Sunset -->
+                        <div class="itinerary-item fade-up">
+                            <div class="itinerary-marker"><i data-lucide="sunset"></i></div>
+                            <div class="itinerary-content">
+                                <span class="itinerary-time">5:30 PM – 6:30 PM</span>
+                                <h3>Sunset at Ayyampara</h3>
+                                <p>End your journey with a peaceful sunset at Ayyampara, a massive rocky hilltop known for its open landscapes.</p>
+                                <ul>
+                                    <li><strong>Why It’s Special:</strong> Beautiful sunset scenery, windy hilltop atmosphere, less crowded.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Tips -->
+                        <div class="itinerary-item fade-up delay-1">
+                            <div class="itinerary-marker"><i data-lucide="info"></i></div>
+                            <div class="itinerary-content">
+                                <span class="itinerary-time" style="background: var(--accent); color: var(--primary-dark);">Travel Guide</span>
+                                <h3>Essential Tips</h3>
+                                <ul>
+                                    <li>Drive carefully on hill roads during fog or rain. Watch out for steep inclines and hairpins. Having an experienced driver for Illikkal Kallu and Vagamon roads is a major plus!</li>
+                                    <li>Wear comfortable shoes, carry water and light jackets.</li>
+                                    <li>Keep the environment clean and avoid littering.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -686,6 +787,12 @@
             <p>&copy; 2026 Teekoy Tourism. All rights reserved.</p>
         </div>
     </footer>
+    <!-- Floating Social Bubble -->
+    <a href="https://www.instagram.com/teekoy_tourism/" target="_blank" rel="noopener noreferrer"
+        class="floating-bubble insta-theme">
+        <i data-lucide="instagram"></i>
+        <span class="bubble-text">Follow</span>
+    </a>
 
     <script src="script.js"></script>
 </body>
