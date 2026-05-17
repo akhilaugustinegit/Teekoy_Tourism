@@ -4,20 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teekoy Tourism | Gateway to Vagamon Hills</title>
+    <title>Teekoy Tourism | Tourist Places Near Vagamon & Kottayam</title>
     <meta name="description"
-        content="Discover Teekoy, the serene village in Kottayam, Kerala, and the perfect gateway to the beautiful Vagamon hills. Explore tourist places, essential info, and more.">
+        content="Explore Teekoy tourism attractions, waterfalls, viewpoints, hospitals, EV charging stations and tourist places near Vagamon, Pala and Kottayam.">
+    <link rel="canonical" href="https://www.teekoytourism.com/">
+
+    <!-- OpenGraph / Social Media SEO -->
+    <meta property="og:title" content="Teekoy Tourism | Tourist Places Near Vagamon & Kottayam">
+    <meta property="og:description"
+        content="Explore Teekoy tourism attractions, waterfalls, viewpoints, hospitals, EV charging stations and tourist places near Vagamon, Pala and Kottayam.">
+    <meta property="og:image" content="https://www.teekoytourism.com/assets/images/meadows.png">
+    <meta property="og:url" content="https://www.teekoytourism.com/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Teekoy Tourism | Tourist Places Near Vagamon & Kottayam">
+    <meta name="twitter:description"
+        content="Explore Teekoy tourism attractions, waterfalls, viewpoints, hospitals, EV charging stations and tourist places near Vagamon, Pala and Kottayam.">
+    <meta name="twitter:image" content="https://www.teekoytourism.com/assets/images/meadows.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Teekoy Tourism",
+      "url": "https://www.teekoytourism.com/",
+      "description": "Explore Teekoy tourism attractions, waterfalls, viewpoints, hospitals, EV charging stations and tourist places near Vagamon, Pala and Kottayam."
+    }
+    </script>
     <link rel="stylesheet" href="styles.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Swiper.js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -54,7 +87,29 @@
             <span class="eyebrow">Welcome to God's Own Country</span>
             <h1>Discover Teekoy</h1>
             <p>The enchanting gateway to the lush green hills of Vagamon.</p>
-            <a href="#explore" class="cta-btn">Start Exploring <i data-lucide="arrow-right"></i></a>
+            <div style="margin-top: 3rem;">
+                <a href="#explore" class="cta-btn">Start Exploring <i data-lucide="arrow-down"></i></a>
+            </div>
+        </div>
+
+        <div class="hero-bottom-dock fade-up delay-1">
+            <div class="weather-bar glass">
+                <div id="weather-teekoy" class="weather-item">
+                    <span class="weather-label">Teekoy</span>
+                    <div class="weather-value">
+                        <span class="icon-container"><i data-lucide="loader" class="spin"></i></span> <span
+                            class="temp">--°C</span>
+                    </div>
+                </div>
+                <div class="weather-divider"></div>
+                <div id="weather-vagamon" class="weather-item">
+                    <span class="weather-label">Vagamon</span>
+                    <div class="weather-value">
+                        <span class="icon-container"><i data-lucide="loader" class="spin"></i></span> <span
+                            class="temp">--°C</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -86,6 +141,12 @@
                     <h3>Scenery</h3>
                     <p>Lush Greenery</p>
                 </div>
+                <div class="stat-card glass" style="padding: 0; overflow: hidden; display: flex;">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16837.193254407986!2d76.80437620301925!3d9.700229496245024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b07ca6fd5dd45dd%3A0xe5dae412eb6bc871!2sTeekoy%2C%20Kerala!5e1!3m2!1sen!2sin!4v1779004090264!5m2!1sen!2sin"
+                        width="100%" height="100%" style="border:0; min-height: 180px;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
         </div>
     </section>
@@ -95,13 +156,110 @@
         <div class="container">
             <div class="section-header fade-up">
                 <h2>Explore Teekoy</h2>
-                <p>Top attractions in and around Teekoy. Discover the hidden gems of the region.</p>
+
+                <div class="read-more-container">
+                    <p class="brief-desc">Top attractions in and around Teekoy. Discover the hidden gems, agrarian
+                        legacy, and rich culture of this highland village.</p>
+                    <button class="read-more-btn" id="readMoreBtn">
+                        <span>Read more about Teekoy</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+
+                    <div class="full-article" id="fullArticle">
+                        <h3>About Teekoy: The Highland Jewel of Kottayam</h3>
+                        <p>Welcome to Teekoy, a captivating highland village where the lush midland plains of Kerala
+                            seamlessly transition into the rugged, mist-clad peaks of the Western Ghats. Situated in the
+                            eastern hinterlands of the Kottayam district, Teekoy is a land defined by its rich agrarian
+                            legacy, breathtaking natural landscapes, and a deeply rooted culture of harmony and
+                            progress.</p>
+                        <p>Spanning an area of 27.19 square kilometers, our village is bordered by iconic destinations
+                            like Vagamon, Erattupetta, Pala, and Thalanadu. Nourished by the perennial waters of the
+                            Meenachil River, Teekoy offers a perfect blend of rustic rural charm and forward-thinking
+                            community life.</p>
+
+                        <h3>🍃 Our Heritage & Agrarian Legacy</h3>
+                        <p>Teekoy holds a monumental place in the economic history of India. More than a century ago,
+                            pioneering settlers braved dense, tropical rainforest terrains to cultivate this fertile
+                            land. Their resilience paved the way for a historic milestone: Teekoy is home to the first
+                            large-scale commercial rubber plantation in India.</p>
+                        <p>This pioneering venture transformed the region from an isolated forest outpost into a
+                            thriving powerhouse of natural rubber and high-value spices. Today, walking through Teekoy
+                            is a journey through history, where you can still glimpse remnants of our industrial past,
+                            including a historic British-era cantilever bridge spanning the Meenachil River and tales of
+                            an ancient aerial monorail system once used to transport rubber sheets down steep mountain
+                            tracks.</p>
+
+                        <h3>👥 Our People & Culture</h3>
+                        <p>The true soul of Teekoy lies in its people. Our demographic fabric is a beautiful mosaic
+                            built on an exemplary spirit of pluralism and communal harmony. For generations, Syrian
+                            Christian, Hindu, and Muslim families, alongside migrated Tamil plantation communities, have
+                            lived and worked cohesively side-by-side.</p>
+                        <p>This shared frontier experience has fostered a highly literate, progressive, and politically
+                            conscious society. Teekoy takes immense pride in having nurtured globally and nationally
+                            distinguished personalities, including:</p>
+                        <ul>
+                            <li><strong>Jacob Thomas IPS:</strong> The renowned former Director General of Police (DGP)
+                                of Kerala, widely respected for his uncompromising anti-corruption stances.</li>
+                            <li><strong>Rev. Dr. Kurien Kunnumpuram (1931–2018):</strong> A revered Roman Catholic
+                                theologian whose intellectual contributions profoundly shaped modern Indian Christian
+                                theology.</li>
+                        </ul>
+                        <p>Daily life in Teekoy rhythmically revolves around the changing seasons and a vibrant calendar
+                            of community celebrations. From grand church feasts (perunals) at the historic St. Mary's
+                            Syro-Malabar Forane Church to colorful local temple festivals, our cultural life is an
+                            enduring testament to unity in diversity.</p>
+
+                        <h3>⛰️ Geography & Natural Wonders</h3>
+                        <p>Blessed with a distinct highland microclimate and heavy tropical rainfall, Teekoy mimics a
+                            vibrant, endless rainforest canopy. The village serves as a scenic gateway to some of
+                            Kerala's finest natural landmarks:</p>
+                        <table class="landmarks-table">
+                            <tr>
+                                <th>Landmark</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td><strong>Meenachil River</strong></td>
+                                <td>The life-giving pulse of the village, weaving beautifully through the local
+                                    landscape.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Marmala Waterfalls</strong></td>
+                                <td>A spectacular, cascading mountain torrent located just a short distance away.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Illikkal Kallu & Ayyampara</strong></td>
+                                <td>Majestic, interlocking rocky peaks offering panoramic views of the valleys below.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Nagapara Mount</strong></td>
+                                <td>Famous for its sweeping vistas, pristine trekking trails, and natural caves.</td>
+                            </tr>
+                        </table>
+
+                        <h3>📈 Teekoy Today</h3>
+                        <p>Administered by the Teekoy Grama Panchayat (established in 1962), the village continues to
+                            thrive as an eco-friendly agrarian economy. While Natural Rubber (Para Rubber) remains our
+                            primary economic driver, our farmers excel in producing premium quality world-renowned
+                            spices, including:</p>
+                        <ul>
+                            <li>Black Pepper & Cardamom</li>
+                            <li>Nutmeg & Cloves</li>
+                            <li>Arecanut, Coconut, and Jackfruit</li>
+                        </ul>
+                        <p>Whether you are a traveler seeking pristine hillside landscapes, a history enthusiast tracing
+                            India's plantation roots, or someone looking to experience genuine Malanad hospitality,
+                            Teekoy welcomes you with open arms and green canopies.</p>
+                    </div>
+                </div>
             </div>
 
             <div class="cards-grid">
                 <div class="place-card fade-up">
                     <div class="card-image">
-                        <img src="assets/images/meadows.png" alt="Vagamon">
+                        <img src="assets/images/meadows.png" alt="Tourist places near Vagamon - Vagamon Meadows"
+                            loading="lazy">
                     </div>
                     <div class="card-content">
                         <h3>Vagamon</h3>
@@ -113,7 +271,7 @@
                 <div class="place-card fade-up delay-1">
                     <div class="card-image">
                         <img src="https://peopleplaces.in/wp-content/uploads/2023/01/Illikkal-Kallu-Tourist-Places-in-Kottayam-768x461.jpg"
-                            alt="Illikkal Kallu">
+                            alt="Tourist places near Teekoy - Illikkal Kallu" loading="lazy">
                     </div>
                     <div class="card-content">
                         <h3>Illikkal Kallu</h3>
@@ -125,7 +283,7 @@
                 <div class="place-card fade-up delay-2">
                     <div class="card-image">
                         <img src="https://www.keralatourism.org/images/picture/large/Marmala_Stream_Kottayam_2497.jpg"
-                            alt="Marmala Waterfalls">
+                            alt="Best Waterfalls Near Kottayam - Marmala Waterfalls" loading="lazy">
                     </div>
                     <div class="card-content">
                         <h3>Marmala Waterfalls</h3>
@@ -137,7 +295,7 @@
                 <div class="place-card fade-up">
                     <div class="card-image">
                         <img src="https://i.pinimg.com/736x/10/e8/0d/10e80dd878cf50319dce5c74a09bba69.jpg"
-                            alt="Ayyampara">
+                            alt="Hidden places in Kottayam - Ayyampara" loading="lazy">
                     </div>
                     <div class="card-content">
                         <h3>Ayyampara</h3>
@@ -149,7 +307,7 @@
                 <div class="place-card fade-up delay-1">
                     <div class="card-image">
                         <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/26/62/26/waterfalls.jpg?w=1100&h=-1&s=1"
-                            alt="Kattikayam Waterfalls">
+                            alt="Waterfalls near Teekoy - Kattikayam Waterfalls" loading="lazy">
                     </div>
                     <div class="card-content">
                         <h3>Kattikayam Waterfalls</h3>
@@ -161,7 +319,7 @@
                 <div class="place-card fade-up delay-2">
                     <div class="card-image">
                         <img src="https://www.godigit.com/content/dam/godigit/directportal/en/contenthm/kadavupuzha-waterfalls-pathanamthitta.jpg"
-                            alt="Kadavupuzha Aruvi Waterfalls">
+                            alt="Kerala village tourism - Kadavupuzha Aruvi Waterfalls" loading="lazy">
                     </div>
                     <div class="card-content">
                         <h3>Kadavupuzha Aruvi Waterfalls</h3>
@@ -173,12 +331,25 @@
                 <div class="place-card fade-up">
                     <div class="card-image">
                         <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/45/ae/a6/elaveezhapoonchira.jpg?w=900&h=-1&s=1"
-                            alt="Ilaveezhapoonchira">
+                            alt="Tourist places near Pala - Ilaveezhapoonchira" loading="lazy">
                     </div>
                     <div class="card-content">
                         <h3>Ilaveezhapoonchira (24 km)</h3>
                         <p>Located 24 km away, this beautiful valley is surrounded by large hills with misty and
                             dramatic atmospheres.</p>
+                    </div>
+                </div>
+
+                <div class="place-card fade-up delay-1">
+                    <div class="card-image">
+                        <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHq0Urmk_3m5f8VYeMv1yGM7mCHbrysHovyU3xBk8dwf5-nLs-R1TiNvWaVng36dfyvYZn4Xfjn99Ua8mwGs84atKTcRhU9YuDVDppvNr-nOFt3-SRlYnRHSvSlEByQ3BMWrUiy=s1360-w1360-h1020-rw"
+                            alt="Teekoy Hanging Bridge over Meenachil River" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Hanging Bridge - Teekoy</h3>
+                        <p>A historic and picturesque suspension bridge over the Meenachil River, offering stunning
+                            views
+                            and a glimpse into Teekoy's agrarian legacy.</p>
                     </div>
                 </div>
             </div>
@@ -193,55 +364,146 @@
                 <p>Just a short drive from Teekoy, discover the wonders of the high ranges.</p>
             </div>
 
-            <div class="cards-grid">
-                <!-- Card 1 -->
-                <div class="place-card fade-up">
-                    <div class="card-image">
-                        <img src="assets/images/meadows.png" alt="Vagamon Meadows">
+            <div class="swiper explore-swiper fade-up">
+                <div class="swiper-wrapper">
+                    <!-- Card 1 -->
+                    <div class="swiper-slide place-card">
+                        <div class="card-image">
+                            <img src="assets/images/meadows.png" alt="Vagamon nearby attractions - Vagamon Meadows"
+                                loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Vagamon Meadows</h3>
+                            <p>Endless rolling hills covered in velvety green grass. The perfect spot for a peaceful
+                                picnic
+                                or a quiet sunset.</p>
+                        </div>
                     </div>
-                    <div class="card-content">
-                        <h3>Vagamon Meadows</h3>
-                        <p>Endless rolling hills covered in velvety green grass. The perfect spot for a peaceful picnic
-                            or a quiet sunset.</p>
-                    </div>
-                </div>
 
-                <!-- Card 2 -->
-                <div class="place-card fade-up delay-1">
-                    <div class="card-image">
-                        <img src="assets/images/pine.png" alt="Pine Forest">
+                    <!-- Card 2 -->
+                    <div class="swiper-slide place-card">
+                        <div class="card-image">
+                            <img src="assets/images/pine.png" alt="Places near Vagamon - Pine Forest" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Pine Forest</h3>
+                            <p>A majestic man-made forest. Walk through the tall pines as sunlight filters through the
+                                misty
+                                canopy.</p>
+                        </div>
                     </div>
-                    <div class="card-content">
-                        <h3>Pine Forest</h3>
-                        <p>A majestic man-made forest. Walk through the tall pines as sunlight filters through the misty
-                            canopy.</p>
-                    </div>
-                </div>
 
-                <!-- Card 3 -->
-                <div class="place-card fade-up delay-2">
-                    <div class="card-image">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Vagamon_Kurisumala_-_%E0%B4%B5%E0%B4%BE%E0%B4%97%E0%B4%AE%E0%B5%BA_%E0%B4%95%E0%B5%81%E0%B4%B0%E0%B4%BF%E0%B4%B6%E0%B5%81%E0%B4%AE%E0%B4%B2_03.jpg"
-                            alt="Kurisumala">
+                    <!-- Card 3 -->
+                    <div class="swiper-slide place-card">
+                        <div class="card-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Vagamon_Kurisumala_-_%E0%B4%B5%E0%B4%BE%E0%B4%97%E0%B4%AE%E0%B5%BA_%E0%B4%95%E0%B5%81%E0%B4%B0%E0%B4%BF%E0%B4%B6%E0%B5%81%E0%B4%AE%E0%B4%B2_03.jpg"
+                                alt="Vagamon Kurisumala Ashram - Tourist places near Vagamon" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Kurisumala</h3>
+                            <p>A serene spiritual site located on a hill, offering panoramic views of the surrounding
+                                valleys and tea estates.</p>
+                        </div>
                     </div>
-                    <div class="card-content">
-                        <h3>Kurisumala</h3>
-                        <p>A serene spiritual site located on a hill, offering panoramic views of the surrounding
-                            valleys and tea estates.</p>
-                    </div>
-                </div>
 
-                <!-- Card 4 -->
-                <div class="place-card fade-up">
-                    <div class="card-image">
-                        <img src="https://myholidayhappiness.com/uploads/thangal-para-2910.jpg" alt="Thangal Para">
+                    <!-- Card 4 -->
+                    <div class="swiper-slide place-card">
+                        <div class="card-image">
+                            <img src="https://myholidayhappiness.com/uploads/thangal-para-2910.jpg"
+                                alt="Thangal Para - Places to visit near Vagamon" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Thangal Para</h3>
+                            <p>A massive spherical rock formation perched on a hill, providing stunning, sweeping views
+                                of
+                                the Vagamon landscape.</p>
+                        </div>
                     </div>
-                    <div class="card-content">
-                        <h3>Thangal Para</h3>
-                        <p>A massive spherical rock formation perched on a hill, providing stunning, sweeping views of
-                            the Vagamon landscape.</p>
+
+                    <!-- Card 5 -->
+                    <div class="swiper-slide place-card">
+                        <div class="card-image">
+                            <img src="https://media-cdn.tripadvisor.com/media/photo-s/08/82/d2/e0/vagamon-lake.jpg"
+                                alt="Vagamon Lake - Tourist attraction" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Vagamon Lake</h3>
+                            <p>A serene artificial lake nestled between three green hills, offering relaxing pedal
+                                boating
+                                amidst picturesque valleys.</p>
+                        </div>
+                    </div>
+
+                    <!-- DUP Card 1 -->
+                    <div class="swiper-slide place-card">
+                        <div class="card-image">
+                            <img src="assets/images/meadows.png" alt="Vagamon nearby attractions - Vagamon Meadows"
+                                loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Vagamon Meadows</h3>
+                            <p>Endless rolling hills covered in velvety green grass. The perfect spot for a peaceful
+                                picnic
+                                or a quiet sunset.</p>
+                        </div>
+                    </div>
+
+                    <!-- DUP Card 2 -->
+                    <div class="swiper-slide place-card">
+                        <div class="card-image">
+                            <img src="assets/images/pine.png" alt="Places near Vagamon - Pine Forest" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Pine Forest</h3>
+                            <p>A majestic man-made forest. Walk through the tall pines as sunlight filters through the
+                                misty
+                                canopy.</p>
+                        </div>
+                    </div>
+
+                    <!-- DUP Card 3 -->
+                    <div class="swiper-slide place-card">
+                        <div class="card-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Vagamon_Kurisumala_-_%E0%B4%B5%E0%B4%BE%E0%B4%97%E0%B4%AE%E0%B5%BA_%E0%B4%95%E0%B5%81%E0%B4%B0%E0%B4%BF%E0%B4%B6%E0%B5%81%E0%B4%AE%E0%B4%B2_03.jpg"
+                                alt="Vagamon Kurisumala Ashram - Tourist places near Vagamon" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Kurisumala</h3>
+                            <p>A serene spiritual site located on a hill, offering panoramic views of the surrounding
+                                valleys and tea estates.</p>
+                        </div>
+                    </div>
+
+                    <!-- DUP Card 4 -->
+                    <div class="swiper-slide place-card">
+                        <div class="card-image">
+                            <img src="https://myholidayhappiness.com/uploads/thangal-para-2910.jpg"
+                                alt="Thangal Para - Places to visit near Vagamon" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Thangal Para</h3>
+                            <p>A massive spherical rock formation perched on a hill, providing stunning, sweeping views
+                                of
+                                the Vagamon landscape.</p>
+                        </div>
+                    </div>
+
+                    <!-- DUP Card 5 -->
+                    <div class="swiper-slide place-card">
+                        <div class="card-image">
+                            <img src="https://media-cdn.tripadvisor.com/media/photo-s/08/82/d2/e0/vagamon-lake.jpg"
+                                alt="Vagamon Lake - Tourist attraction" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Vagamon Lake</h3>
+                            <p>A serene artificial lake nestled between three green hills, offering relaxing pedal
+                                boating
+                                amidst picturesque valleys.</p>
+                        </div>
                     </div>
                 </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
@@ -263,7 +525,7 @@
                     <div class="timeline">
                         <div class="timeline-item">
                             <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHv6YWSyEJac0Ns_BKotzICqTlsasBPJk-QSveHTqX2U97Sk5m3ew72tZBcBSxLLuv8uqe4JUfezmMPJH2GXMvjNGpYDhwORGjG3YW0V-x4OnJ2_K7tZNabtw-QKgZo9KVmtefxz9kG2as9=s680-w680-h510-rw"
-                                alt="Hospital">
+                                alt="Primary Health Centre Teekoy - Hospitals in Teekoy" loading="lazy">
                             <div class="timeline-content">
                                 <h4>Primary Health Centre, Teekoy</h4>
                                 <span>0 km</span>
@@ -271,7 +533,7 @@
                         </div>
                         <div class="timeline-item">
                             <img src="https://lh3.googleusercontent.com/p/AF1QipMlMbzNqt9NrjtlgapvFCcaQlu9F5LR7oeiZwgf=s680-w680-h510-rw"
-                                alt="Hospital">
+                                alt="Sunrise Hospital Erattupetta - Hospitals near Teekoy" loading="lazy">
                             <div class="timeline-content">
                                 <h4>Sunrise Hospital, Erattupetta</h4>
                                 <span>6.3 km</span>
@@ -279,7 +541,7 @@
                         </div>
                         <div class="timeline-item">
                             <img src="https://content.jdmagicbox.com/comp/kottayam/n3/9999px481.x481.100917145324.t4n3/catalogue/marian-medical-centre-pala-town-kottayam-hospitals-12o4ccyzvb.jpg"
-                                alt="Hospital">
+                                alt="Marian Medical Centre Pala - Hospitals near Teekoy" loading="lazy">
                             <div class="timeline-content">
                                 <h4>Marian Medical Centre, Pala</h4>
                                 <span>21.0 km</span>
@@ -287,14 +549,15 @@
                         </div>
                         <div class="timeline-item">
                             <img src="https://images.jdmagicbox.com/comp/kottayam/p7/9999px481.x481.231018231750.a9p7/catalogue/mar-sleeva-medicity-cherpunkal-kottayam-hospitals-0expvgrvuv-250.jpg"
-                                alt="Hospital">
+                                alt="Mar Sleeva Medicity Pala - Hospitals near Teekoy" loading="lazy">
                             <div class="timeline-content">
                                 <h4>Mar Sleeva Medicity, Pala</h4>
                                 <span>25.1 km</span>
                             </div>
                         </div>
                         <div class="timeline-item">
-                            <img src="https://www.caritashospital.org/media/images/File_1_az4WtPT.jpg" alt="Hospital">
+                            <img src="https://www.caritashospital.org/media/images/File_1_az4WtPT.jpg"
+                                alt="Caritas Hospital Kottayam" loading="lazy">
                             <div class="timeline-content">
                                 <h4>Caritas Hospital, Kottayam</h4>
                                 <span>36.8 km</span>
@@ -302,7 +565,7 @@
                         </div>
                         <div class="timeline-item">
                             <img src="https://images-prd.deshabhimani.com/24_JPN_3medicalcollegektmnew-1761333652598-06da8949-65bd-4b22-a413-a835caac8698.jpg"
-                                alt="Hospital">
+                                alt="Kottayam Medical College" loading="lazy">
                             <div class="timeline-content">
                                 <h4>Kottayam Medical College (Govt)</h4>
                                 <span>40.0 km</span>
@@ -351,7 +614,7 @@
                         <li>
                             <i data-lucide="map-pin"></i>
                             <a href="https://maps.app.goo.gl/fYFxesZWLMdZbCHz7" target="_blank"
-                                rel="noopener noreferrer">Location on Map</a>
+                                rel="noopener noreferrer">Near Panchayath Jn Location on Map</a>
                         </li>
                     </ul>
                 </div>
@@ -396,8 +659,8 @@
                     class="cta-btn insta-theme">
                     <i data-lucide="instagram"></i> Follow on Instagram
                 </a>
-                <a href="#" target="_blank" rel="noopener noreferrer" class="cta-btn"
-                    style="background-color: #1877F2; color: white;">
+                <a href="https://www.facebook.com/people/Teekoy-Tourism/61574683390394/" target="_blank"
+                    rel="noopener noreferrer" class="cta-btn" style="background-color: #1877F2; color: white;">
                     <i data-lucide="facebook"></i> Follow on Facebook
                 </a>
             </div>
